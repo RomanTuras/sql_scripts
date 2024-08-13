@@ -1,0 +1,1 @@
+select id, title, model, upc from products_uk where id_brands=0 and is_show=1;
