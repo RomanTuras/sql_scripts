@@ -22,41 +22,31 @@ SELECT * FROM filter_fields_uk as ff
 left join products_filter_fields as pff ON ff.id=pff.id_filter_fields 
 where ff.id_filters=10915 and pff.id_products=75938;
 
-DELETE pff 
-FROM products_filter_fields as pff
-INNER JOIN filter_fields_uk as ff ON ff.id=pff.id_filter_fields 
-WHERE ff.id_filters IN(10017,10023,10024,10025,10026,10028,10089,10089,10626,12165,12166,12470)
-AND pff.id_products IN(SELECT id_products FROM products_categories where id_categories=452);
+
 
 DELETE pff 
 FROM products_filter_fields as pff
 INNER JOIN filter_fields_uk as ff ON ff.id=pff.id_filter_fields 
-WHERE ff.id_filters IN(10017,10024,10025,10026,10028,10089,10197,10622,12165,12166,12216,12470,12533)
-AND pff.id_products IN(SELECT id_products FROM products_categories where id_categories=450);
+WHERE ff.id_filters IN(10012,10040,10089,12055,12470)
+AND pff.id_products IN(SELECT id_products FROM products_categories where id_categories=462);
 
 DELETE pff 
 FROM products_filter_fields as pff
 INNER JOIN filter_fields_uk as ff ON ff.id=pff.id_filter_fields 
-WHERE ff.id_filters IN(10024,10025,10026,10028,10089,12165)
-AND pff.id_products IN(SELECT id_products FROM products_categories where id_categories=456);
+WHERE ff.id_filters IN(10012,10019,10089,10200,10345,10622,10638,10895,10896,10942,12055,12470)
+AND pff.id_products IN(SELECT id_products FROM products_categories where id_categories=453);
 
 DELETE pff 
 FROM products_filter_fields as pff
 INNER JOIN filter_fields_uk as ff ON ff.id=pff.id_filter_fields 
-WHERE ff.id_filters IN(10017,10024,10025,10026,10028,10089,10622,10638,12165,12166,12533)
-AND pff.id_products IN(SELECT id_products FROM products_categories where id_categories=451);
+WHERE ff.id_filters IN(10012,10016,10023,10024,10028,10033,10040,10089,10142,10197,10339,10895,11986,11987,12009,12051,12055,12061,12062,12463)
+AND pff.id_products IN(SELECT id_products FROM products_categories where id_categories=457);
 
 DELETE pff 
 FROM products_filter_fields as pff
 INNER JOIN filter_fields_uk as ff ON ff.id=pff.id_filter_fields 
-WHERE ff.id_filters IN(10024,10025,10026,10028,10089,12165,12470)
-AND pff.id_products IN(SELECT id_products FROM products_categories where id_categories=507);
+WHERE ff.id_filters IN(10012,10016,10023,10024,10028,10033,10040,10142,10339,12463)
+AND pff.id_products IN(SELECT id_products FROM products_categories where id_categories=508);
+
 
 -- id_filters
--- 10017,10023,10024,10025,10026,10028,10089,10089,10626,12165,12166,12470
-
--- 10017,10024,10025,10026,10028,10089,10197,10622,12165,12166,12216,12470,12533
-
--- 10017,10024,10025,10026,10028,10089,10622,10638,12165,12166,12533
-
--- 10024,10025,10026,10028,10089,12165,12470
