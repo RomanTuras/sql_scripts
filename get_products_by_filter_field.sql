@@ -2,20 +2,7 @@
 -- Проточні фільтри для води - id=449
 -- Фільтри зворотного осмосу - id=506
 
--- Побутові фільтри для води (родительска)
--- Системи комплексного очищення води 452
--- Фільтри для пом'якшення води 450
--- Вугільні фільтри 456
--- Фільтри від заліза 451
--- Фільтри від сірководню 507
 
--- Картриджні фільтри для води (родительска)
--- Механічні фільтри 462
--- Магістральні фільтри для води 453
--- Мембранні фільтри для води 454
--- Фільтри від накипу для побутової техніки 457
--- Дискові промивні фільтри 455
--- Магнітні фільтри 508
 
 -- Get products from category
 SELECT id_products FROM products_categories WHERE id_categories=446;
@@ -47,8 +34,8 @@ AND pff.id_products IN(SELECT id_products FROM products_categories where id_cate
 DELETE pff 
 FROM products_filter_fields as pff 
 LEFT JOIN filter_fields_uk as ff ON ff.id=pff.id_filter_fields 
-WHERE ff.id_filters IN(10012,10015,10020,10025,10026,10077,10089,10134,10175,10207,10622,10870,10915,10942,12165,12166,12211,12216,12554,12642)
-AND pff.id_products IN(SELECT id_products FROM products_categories where id_categories=506);
+WHERE ff.id_filters IN(10025,10036,10081,10084,10200,10561,10622,12364,12536)
+AND pff.id_products IN(SELECT id_products FROM products_categories where id_categories=198);
 
 
 
@@ -66,7 +53,7 @@ LEFT JOIN filter_fields_uk as ff ON ff.id=pff.id_filter_fields
 WHERE pff.id_products in(SELECT id_products FROM products_categories WHERE id_categories=506) AND ff.id_filters IN(10012, 10015);
 
 
-
+10025,10036,10081,10084,10200,10561,10622,12364,12536
 
 
 
